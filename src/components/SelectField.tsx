@@ -3,13 +3,12 @@ const months = [
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
   ];
   
-  export default function SelectField({ label ='', name='', value='' }) {
+  export default function SelectField({ label ='', ...rest }) {
     return (
       <div className="flex flex-col">
         <label className="text-sm">{label}</label>
         <select
-          name={name}
-          value={value}
+          {...rest}
           className="border rounded-sm border-gray-400 h-[40px] p-2"
         >
           <option value="" disabled>Selecione...</option>
