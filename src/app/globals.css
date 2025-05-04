@@ -1,16 +1,69 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 body {
-  color: var(--foreground);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #494949;
 }
+
+.logo {
+  @apply flex gap-1 font-bold text-white items-center text-sm px-4;
+}
+.logo svg {
+  fill: blue !important;
+  stroke: red!important;
+}
+.header {
+  @apply flex flex-col md:flex-row justify-around px-4 justify-end gap-4;
+}
+
+.header__headline {
+  @apply font-bold text-4xl w-[70%] leading-tight italic text-white;
+}
+
+.header__info-title {
+ @apply uppercase text-white font-semibold text-xs flex gap-2 items-center
+}
+.header__info-subtitle {
+  @apply flex gap-2 text-white text-xs leading-relaxed;
+}
+
+.hero-diagonal {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background:
+    url('/hero.jpg') no-repeat center center / cover, rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 60%;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/hero.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+.hero-diagonal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 12px 12px;
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+  z-index: 0;
+  background-color: #003087;
+}
+
+.hero__background {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+}
+
