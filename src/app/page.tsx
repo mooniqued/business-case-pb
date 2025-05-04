@@ -19,7 +19,7 @@ export default function Home() {
           <InputField label="Qual seu saldo?" name="balance" placeholder="ex.: R$ 5.000,00" />
           <SelectField label="Qual seu mês de aniversário?" name="birthday" />
         </div>
-        <button type="submit" className="bg-yellow-300 hover:bg-yellow-200 text-white font-bold text-md rounded-sm p-2 w-[50%]"> Ver Proposta </button>
+        <button type="submit" className="bg-yellow-300 hover:bg-yellow-200 text-white font-bold text-md rounded-sm p-2 w-[50%] cursor-pointer"> Ver Proposta </button>
       </form>
     </div>
   );
