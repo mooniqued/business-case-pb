@@ -41,15 +41,6 @@ body {
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 60%;
-  background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('/hero.jpg') center/cover no-repeat;
-  z-index: 0;
-}
 .hero-diagonal::after {
   content: "";
   position: absolute;

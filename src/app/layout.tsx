@@ -17,6 +17,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <title>Simulação Saque Aniversário</title>
+      </head>
       <body
         className="flex flex-col min-h-screen overflow-hidden justify-center w-full items-center"
       >
