@@ -29,7 +29,6 @@ export default function Home() {
     event.preventDefault();
 
     setIsLoading(true);
-console.log(isFormValid, 'isFormValid')
 
     const amountToReceive = calcAmount(Number(form.balance.replace(',', '.')));
 
